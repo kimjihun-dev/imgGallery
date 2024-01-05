@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="gallery">
+      <div class="image">
+        <img
+          src="img/1.jpg"
+          alt="sex"
+          onclick="openModal('img/1.jpg', 'Web Design')"
+        />
+      </div>
+      <div class="image">
+        <img
+          src="img/2.jpg"
+          alt="sex2"
+          onclick="openModal('img/2.jpg', 'Python')"
+        />
+      </div>
+      <div class="image">
+        <img
+          src="img/3.jpg"
+          alt="sex3"
+          onclick="openModal('img/3.jpg', 'UI UX')"
+        />
+      </div>
+      <div class="image">
+        <img
+          src="img/4.jpg"
+          alt="sed4"
+          onclick="openModal('img/4.jpg', 'React')"
+        />
+      </div>
+      <div class="image">
+        <img
+          src="img/1.jpg"
+          alt="asfdasd"
+          onclick="openModal('img/1.jpg', 'Web Design')"
+        />
+      </div>
+      <div class="image">
+        <img
+          src="img/2.jpg"
+          alt="sadasd"
+          onclick="openModal('img/2.jpg', 'django')"
+        />
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img src="" alt="" id="modal-image" />
+      <div id="caption" class="caption"></div>
+    </div>
+
+    <script>
+      function openModal(imageSrc, imageAlt) {
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("modal-image");
+        const captionText = document.getElementById("caption");
+
+        modal.style.display = "block";
+        modalImg.src = imageSrc;
+        modalImg.alt = imageAlt;
+        captionText.innerHTML = imageAlt;
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("modal");
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
